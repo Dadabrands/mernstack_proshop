@@ -48,6 +48,12 @@ const users = [
     password: hashSync("123456", 10), // Use hashSync directly
     isAdmin: false,
   },
+  {
+    name: "Josh",
+    email: "josh@email.com",
+    password: hashSync("123456", 10), // Use hashSync directly
+    isAdmin: true,
+  },
 ];
 
 export default users;

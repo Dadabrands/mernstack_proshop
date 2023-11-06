@@ -9,8 +9,8 @@ import {
   getUserProfile,
   updateUserProfile,
   getUsers,
-  deleteUsers,
-  getUsersByID,
+  deleteUser,
+  getUserByID,
   updateUser,
 } from "../controllers/userController.js";
 
@@ -23,8 +23,8 @@ router
   .put(protect, updateUserProfile);
 router
   .route("/:id")
-  .delete(protect, admin, deleteUsers)
-  .get(protect, admin, getUsersByID)
-  .put(protect, admin, updateUserProfile);
+  .delete(protect, admin, deleteUser)
+  .get(protect, admin, getUserByID)
+  .put(protect, admin, updateUser);
 
 export default router;
