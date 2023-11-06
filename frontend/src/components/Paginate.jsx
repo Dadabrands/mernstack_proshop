@@ -1,5 +1,6 @@
 import { Pagination } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import PropTypes from "prop-types";
 
 const Paginate = ({ pages, page, isAdmin = false, keyword = "" }) => {
   return (
@@ -22,6 +23,13 @@ const Paginate = ({ pages, page, isAdmin = false, keyword = "" }) => {
       </Pagination>
     )
   );
+};
+
+Paginate.propTypes = {
+  pages: PropTypes.number.isRequired, // Should be a number
+  page: PropTypes.number.isRequired, // Should be a number
+  keyword: PropTypes.string.isRequired, // String is correct
+  isAdmin: PropTypes.bool.isRequired, // Should be a boolean
 };
 
 export default Paginate;

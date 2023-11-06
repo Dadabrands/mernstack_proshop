@@ -15,5 +15,11 @@ Meta.defaultProps = {
   description: "We sell the best products for cheap",
   keywords: "electronics, buy electronics, cheap electroincs",
 };
+import PropTypes from "prop-types";
 
+Meta.propTypes = {
+  title: PropTypes.string.isRequired,
+  keywords: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 export default Meta;
